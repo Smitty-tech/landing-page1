@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(
+    to left bottom,
+    #1eca4b,
+    #00b89b,
+    #009ee9,
+    #007aff,
+    #1438e0
+  );
+}
+
+header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 90px;
+  padding: 0 40px;
+}
+
+header .logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+header .menu ul {
+  display: flex;
+}
+header .menu ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu li a {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  padding-right: 20px;
+}
+.menu-btn {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  font-weight: bold;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+#home {
+  height: calc(100vh - 90px);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .info-section {
+  width: 50%;
+}
+#home .info-section h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+}
+#home .info-section h4 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+#home .info-section .call-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.action-btn,
+.action-ghost-btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 30px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+.action-btn {
+  background: white;
+  color: #009ee9;
+  font-weight: bold;
+}
+.action-ghost-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: #1eca4b;
+  font-weight: bold;
+}
+#home .photos {
+  width: 50%;
+  position: relative;
+  height: 400px;
+}
+#home .photos .girl {
+  position: absolute;
+  border-radius: 10px;
+  width: 350px;
+  height: 600px;
+  z-index: 1;
+  transform: translate3d(0, -180px, 0);
+}
+#home .photos .boy {
+  position: absolute;
+  border-radius: 10px;
+  width: 350px;
+  height: 600px;
+  z-index: 2;
+  transform: translate3d(230px, 120px, 0);
+}
+.shape1{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    border: 2px dashed white;
+    transform: translate3d(100px, 0, 0);
+}
+.shape2{
+    opacity: .3;
+    background: white;
+    border: 2px dashed white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: translate3d(470px, -300px, 0);
+    border: 2px dashed white;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.shape3{
+    opacity: .6;
+    background: white;
+    border: 2px dashed white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: translate3d(0px, 340px, 0);
+    border: 2px dashed white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+
+/* Mobile devices */
+@media only screen and (max-width: 400px) {
+    header {
+      flex-direction: column;
+      height: auto;
+      padding: 15px;
+    }
+  
+    header .menu ul {
+      flex-direction: column;
+    }
+  
+    header .menu ul li {
+      justify-content: flex-start;
+      padding: 10px 0;
+    }
+  
+    .container {
+      padding: 0 15px;
+    }
+  
+    #home {
+      height: auto;
+      padding: 50px 0;
+    }
+  
+    #home .info-section,
+    #home .photos {
+      width: 100%;
+    }
+  
+    #home .info-section h1 {
+      font-size: 3.5rem;
+    }
+  
+    #home .info-section h4 {
+      font-size: 1rem;
+    }
+  
+    #home .info-section .call-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+  
+    .action-btn,
+    .action-ghost-btn {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #home .photos .girl,
+    #home .photos .boy {
+      width: 100%;
+      height: auto;
+      transform: none;
+      position: static;
+      margin-bottom: 1rem;
+    }
+  
+    .shape1,
+    .shape2,
+    .shape3 {
+      display: none;
+    }
+  }
+  
+  /* Tablets and small desktops */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Adjustments for tablet and small desktop screens if needed */
+  }
+  
+  /* Desktops and large screens */
+  @media only screen and (min-width: 1024px) {
+    /* Adjustments for desktop and large screens if needed */
+  }
+  
